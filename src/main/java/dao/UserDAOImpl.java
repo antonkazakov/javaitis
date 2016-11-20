@@ -44,7 +44,7 @@ public class UserDAOImpl implements UsersDao{
 
     public User find(int id) {
 
-        User user;
+        User user = null;
 
         try {
             Statement statement = connection.createStatement();
@@ -58,6 +58,8 @@ public class UserDAOImpl implements UsersDao{
     }
 
     public void save(User user) {
+
+
 
     }
 
