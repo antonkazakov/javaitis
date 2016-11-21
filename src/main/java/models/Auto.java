@@ -1,5 +1,8 @@
 package models;
 
+
+import com.google.common.base.Objects;
+
 /**
  * Created by antonkazakov on 21.11.16.
  */
@@ -63,4 +66,17 @@ public class Auto {
     public void setModelName(String modelName) {
         this.modelName = modelName;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        final Auto auto = (Auto) obj;
+
+        return Objects.equal(this.id,auto.id)&&
+                Objects.equal(this.distance,auto.distance)&&
+                Objects.equal(this.modelName,auto.modelName)&&
+                Objects.equal(this.userId,auto.userId);
+
+    }
+
 }

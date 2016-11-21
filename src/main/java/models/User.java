@@ -1,5 +1,7 @@
 package models;
 
+import com.google.common.base.Objects;
+
 import java.util.List;
 
 /**
@@ -102,6 +104,16 @@ public class User {
         this.city = city;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+
+        final User user = (User) obj;
+
+        return Objects.equal(this.id,user.id)&&
+                Objects.equal(this.city,user.city)&&
+                Objects.equal(this.name,user.name)&&
+                Objects.equal(this.age,user.age);
+    }
 
     /**
      * Builder
@@ -162,4 +174,6 @@ public class User {
             return new User(id,autos,city,name,age);
         }
     }
+
+
 }
