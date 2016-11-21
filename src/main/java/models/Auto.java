@@ -5,13 +5,25 @@ package models;
  */
 public class Auto {
 
-    int id;
+    /**
+     * User id
+     */
+    private int id;
 
-    String modelName;
+    /**
+     * Car model name
+     */
+    private String modelName;
 
-    long distance;
+    /**
+     * Car distance driven
+     */
+    private long distance;
 
-    int userId;
+    /**
+     * Owner id
+     */
+    private int userId;
 
     public Auto(int id, long distance, String modelName, int userId) {
         this.id = id;

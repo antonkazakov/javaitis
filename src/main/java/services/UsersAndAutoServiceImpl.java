@@ -1,4 +1,4 @@
-package factories;
+package services;
 
 import dao.AutoDAO;
 import dao.UsersDao;
@@ -20,7 +20,6 @@ public class UsersAndAutoServiceImpl implements UsersAndAutoService {
         this.usersDao = usersDao;
         this.autoDAO = autoDAO;
     }
-
 
     /**
      * Check is users exists id DB

@@ -7,14 +7,29 @@ import java.util.List;
  */
 public class User {
 
+    /**
+     * User id
+     */
     private int id;
 
+    /**
+     * User name
+     */
     private String name;
 
+    /**
+     * User age
+     */
     private int age;
 
+    /**
+     * User city
+     */
     private String city;
 
+    /**
+     * User car list
+     */
     private List<Auto> autos;
 
     public User(int id, String city, String name, int age) {

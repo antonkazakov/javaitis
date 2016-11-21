@@ -23,6 +23,11 @@ public class UserDAOImpl implements UsersDao{
         this.connection = connection;
     }
 
+
+    /**
+     * Find all users
+     * @return
+     */
     public List<User> findAll() {
 
         List<User> users = new ArrayList<User>();
@@ -42,6 +47,11 @@ public class UserDAOImpl implements UsersDao{
         return users;
     }
 
+    /**
+     * Find user by Id
+     * @param id
+     * @return
+     */
     public User find(int id) {
 
         User user = null;
@@ -57,16 +67,26 @@ public class UserDAOImpl implements UsersDao{
         return user;
     }
 
+    /**
+     * Save user
+     * @param user
+     */
     public void save(User user) {
-
-
 
     }
 
+    /**
+     * Delete user by Id
+     * @param id
+     */
     public void delete(int id) {
 
     }
 
+    /**
+     * Update user
+     * @param user
+     */
     public void update(User user) {
 
     }

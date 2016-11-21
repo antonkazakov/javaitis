@@ -2,6 +2,7 @@ package factories;
 
 import dao.AutoDAO;
 import dao.UsersDao;
+import services.UsersAndAutoService;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

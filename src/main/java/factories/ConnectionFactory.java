@@ -30,10 +30,10 @@ public class ConnectionFactory {
         try {
             properties.load(new FileInputStream(""));
 
-            String driver = properties.getProperty("driver");
-            String url = properties.getProperty("url");
-            String name = properties.getProperty("name");
-            String password = properties.getProperty("password");
+            String driver = properties.getProperty("database.driver");
+            String url = properties.getProperty("database.url");
+            String name = properties.getProperty("database.name");
+            String password = properties.getProperty("database.password");
 
             Class.forName(driver);
             connection = DriverManager.getConnection(url,name,password);
