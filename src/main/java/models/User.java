@@ -86,4 +86,61 @@ public class User {
     public void setCity(String city) {
         this.city = city;
     }
+
+    public static class Builder {
+        /**
+         * User id
+         */
+        private int id;
+
+        /**
+         * User name
+         */
+        private String name;
+
+        /**
+         * User age
+         */
+        private int age;
+
+        /**
+         * User city
+         */
+        private String city;
+
+        /**
+         * User car list
+         */
+        private List<Auto> autos;
+
+
+        public Builder setId(int id){
+            this.id = id;
+            return this;
+        }
+
+        public Builder setName(String name){
+            this.name = name;
+            return this;
+        }
+
+        public Builder setAge(int age){
+            this.age = age;
+            return this;
+        }
+
+        public Builder setCity(String city){
+            this.city = city;
+            return this;
+        }
+
+        public Builder setAutos(List<Auto> autos){
+            this.autos = autos;
+            return this;
+        }
+
+        public User build(){
+            return new User(id,autos,city,name,age);
+        }
+    }
 }
