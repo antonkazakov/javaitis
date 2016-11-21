@@ -32,6 +32,13 @@ public class User {
      */
     private List<Auto> autos;
 
+    /**
+     *  Constructor w/o autos
+     * @param id
+     * @param city
+     * @param name
+     * @param age
+     */
     public User(int id, String city, String name, int age) {
         this.id = id;
         this.city = city;
@@ -39,6 +46,14 @@ public class User {
         this.age = age;
     }
 
+    /**
+     * Constructor with autos
+     * @param id
+     * @param autos
+     * @param city
+     * @param name
+     * @param age
+     */
     public User(int id, List<Auto> autos, String city, String name, int age) {
         this.id = id;
         this.autos = autos;
@@ -87,6 +102,10 @@ public class User {
         this.city = city;
     }
 
+
+    /**
+     * Builder
+     */
     public static class Builder {
         /**
          * User id
