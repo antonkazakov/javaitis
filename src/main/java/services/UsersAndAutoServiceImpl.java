@@ -41,9 +41,11 @@ public class UsersAndAutoServiceImpl implements UsersAndAutoService {
         List<User> users = new ArrayList<User>();
 
         for (User user : usersDao.findAll()){
-            List<Auto> userAutos = autoDAO.getUserCars(user.getId());
-            user.setAutos(userAutos);
-            users.add(user);
+            if (user.getCity()!=null && user.getCity().equals(city)){
+                List<Auto> userAutos = autoDAO.getUserCars(user.getId());
+                user.setAutos(userAutos);
+                users.add(user);
+            }
         }
 
         return users;
@@ -65,6 +67,26 @@ public class UsersAndAutoServiceImpl implements UsersAndAutoService {
         }
 
         return users;
+    }
+
+
+    /**
+     * Get All cars in specific city
+     * @param city
+     * @return
+     */
+    public List<Auto> getAllCarsByCity(String city) {
+
+        List<Auto> autos = new ArrayList<Auto>();
+
+        for (User user : usersDao.findAll()){
+            if (user.getCity()!=null && user.getCity().equals(city)){
+                List<Auto> userAutos = autoDAO.getUserCars(user.getId());
+                autos.addAll(userAutos);
+            }
+        }
+
+        return autos;
     }
 
 }

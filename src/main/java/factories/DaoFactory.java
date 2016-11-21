@@ -4,6 +4,9 @@ import com.sun.istack.internal.NotNull;
 import dao.AutoDAO;
 import dao.UsersDao;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
@@ -27,9 +30,14 @@ public class DaoFactory {
 
     private DaoFactory() {
 
+        properties = new Properties();
+
         try {
-            Constructor usersConstructor = Class.forName("").getConstructor(Connection.class);
-            Constructor autoConstructor = Class.forName("").getConstructor(Connection.class);
+
+            properties.load(new FileInputStream(""));
+
+            Constructor usersConstructor = Class.forName(properties.getProperty("")).getConstructor(Connection.class);
+            Constructor autoConstructor = Class.forName(properties.getProperty("")).getConstructor(Connection.class);
 
             usersDao = (UsersDao) usersConstructor.newInstance(ConnectionFactory.getConnectionFactory().getConnection());
             autoDAO = (AutoDAO)autoConstructor.newInstance(ConnectionFactory.getConnectionFactory().getConnection());
@@ -43,6 +51,10 @@ public class DaoFactory {
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

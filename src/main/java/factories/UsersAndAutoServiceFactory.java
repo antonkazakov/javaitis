@@ -4,8 +4,12 @@ import dao.AutoDAO;
 import dao.UsersDao;
 import services.UsersAndAutoService;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Properties;
 
 /**
  * Created by antonkazakov on 21.11.16.
@@ -16,13 +20,19 @@ public class UsersAndAutoServiceFactory {
 
     private UsersAndAutoService usersAndAutoService;
 
+    Properties properties;
+
     static {
         new UsersAndAutoServiceFactory();
     }
 
     private UsersAndAutoServiceFactory() {
+
+        properties = new Properties();
+
         try {
-            Constructor constructor = Class.forName("").getConstructor(UsersDao.class, AutoDAO.class);
+            properties.load(new FileInputStream(""));
+            Constructor constructor = Class.forName(properties.getProperty("")).getConstructor(UsersDao.class, AutoDAO.class);
             usersAndAutoService = (UsersAndAutoService) constructor.newInstance(DaoFactory.getDaoFactory().getUsersDao(),DaoFactory.getDaoFactory().getAutoDAO());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -33,6 +43,10 @@ public class UsersAndAutoServiceFactory {
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

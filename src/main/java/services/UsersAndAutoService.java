@@ -1,5 +1,6 @@
 package services;
 
+import models.Auto;
 import models.User;
 
 import java.util.List;
@@ -14,5 +15,7 @@ public interface UsersAndAutoService {
     List<User> getAllUsersByCity(String city);
 
     List<User> getAllUsers();
+
+    List<Auto> getAllCarsByCity(String city);
 
 }
