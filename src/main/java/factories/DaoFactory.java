@@ -1,5 +1,6 @@
 package factories;
 
+import com.sun.istack.internal.NotNull;
 import dao.AutoDAO;
 import dao.UsersDao;
 
@@ -15,16 +16,16 @@ public class DaoFactory {
 
     private static DaoFactory daoFactory;
 
-    UsersDao usersDao;
-    AutoDAO autoDAO;
+    private UsersDao usersDao;
+    private AutoDAO autoDAO;
 
-    Properties properties;
+    private Properties properties;
 
     static {
         new DaoFactory();
     }
 
-    public DaoFactory() {
+    private DaoFactory() {
 
         try {
             Constructor usersConstructor = Class.forName("").getConstructor(Connection.class);
@@ -32,7 +33,7 @@ public class DaoFactory {
 
             usersDao = (UsersDao) usersConstructor.newInstance(ConnectionFactory.getConnectionFactory().getConnection());
             autoDAO = (AutoDAO)autoConstructor.newInstance(ConnectionFactory.getConnectionFactory().getConnection());
-            
+
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -49,5 +50,15 @@ public class DaoFactory {
 
     public static DaoFactory getDaoFactory() {
         return daoFactory;
+    }
+
+    @NotNull
+    public UsersDao getUsersDao() {
+        return usersDao;
+    }
+
+    @NotNull
+    public AutoDAO getAutoDAO() {
+        return autoDAO;
     }
 }

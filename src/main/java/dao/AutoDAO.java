@@ -1,5 +1,6 @@
 package dao;
 
+import models.Auto;
 import models.User;
 
 import java.util.List;
@@ -9,5 +10,6 @@ import java.util.List;
  */
 public interface AutoDAO {
 
+    List<Auto> getUserCars(int id);
 
 }

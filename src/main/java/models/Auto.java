@@ -11,10 +11,21 @@ public class Auto {
 
     long distance;
 
-    public Auto(int id, long distance, String modelName) {
+    int userId;
+
+    public Auto(int id, long distance, String modelName, int userId) {
         this.id = id;
         this.distance = distance;
         this.modelName = modelName;
+        this.userId = userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public int getUserId() {
+        return userId;
     }
 
     public int getId() {

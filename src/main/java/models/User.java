@@ -1,5 +1,7 @@
 package models;
 
+import java.util.List;
+
 /**
  * Created by antonkazakov on 21.11.16.
  */
@@ -13,13 +15,29 @@ public class User {
 
     private String city;
 
-
+    private List<Auto> autos;
 
     public User(int id, String city, String name, int age) {
         this.id = id;
         this.city = city;
         this.name = name;
         this.age = age;
+    }
+
+    public User(int id, List<Auto> autos, String city, String name, int age) {
+        this.id = id;
+        this.autos = autos;
+        this.city = city;
+        this.name = name;
+        this.age = age;
+    }
+
+    public List<Auto> getAutos() {
+        return autos;
+    }
+
+    public void setAutos(List<Auto> autos) {
+        this.autos = autos;
     }
 
     public int getAge() {
