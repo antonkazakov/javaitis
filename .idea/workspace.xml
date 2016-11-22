@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f0bb2c3-40ca-4ce3-a0eb-c52eb83ebbd5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/services/AuthorizationService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/services/AuthorizationServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dao/AuthorizationDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dao/AuthorizationDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/UsersDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/UsersDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Auto.iml" afterPath="$PROJECT_DIR$/Auto.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/factories/ConnectionFactory.java" afterPath="$PROJECT_DIR$/src/main/java/factories/ConnectionFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/factories/DaoFactory.java" afterPath="$PROJECT_DIR$/src/main/java/factories/DaoFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/dao/UserDAOImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/dao/UserDAOImplTest.java" />
     </list>
     <ignored path="Auto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,14 +33,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DaoFactory.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/factories/DaoFactory.java">
+      <file leaf-file-name="AuthorizationDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/AuthorizationDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="48" column="144" selection-start-line="48" selection-start-column="144" selection-end-line="48" selection-end-column="144" />
+            <state relative-caret-position="105">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthorizationDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/AuthorizationDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1479840149000" expanded="true" signature="400:447" ph="INSERT INTO users... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectionFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/factories/ConnectionFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,12 +118,10 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/AutoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/factories/UsersAndAutoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/database.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/factories/ConnectionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/UsersAndAutoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/AutoDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/UsersAndAutoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/factories/UsersAndAutoServiceFactory.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/dao/AutoDAOImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Auto.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/User.java" />
@@ -99,11 +129,13 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/UsersDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/AuthorizationDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/AuthorizationDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/AuthoriationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/AuthorizationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/AuthorizationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/factories/DaoFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/factories/ConnectionFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/AuthorizationDAOImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -332,6 +364,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Auto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Auto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -791,16 +845,24 @@
       <workItem from="1479678938149" duration="8780000" />
       <workItem from="1479710924997" duration="5820000" />
       <workItem from="1479719601844" duration="243000" />
-      <workItem from="1479798994178" duration="4456000" />
+      <workItem from="1479798994178" duration="5356000" />
     </task>
+    <task id="LOCAL-00001" summary="+ Authorization DAO&#10;+ Authoriaztion Service">
+      <created>1479839206210</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1479839206210</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19299000" />
+    <option name="totallyTimeSpent" value="20199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="800" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -810,7 +872,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -839,7 +901,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="+ Auto DAO&#10;+ Users DAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Auto DAO&#10;+ Users DAO" />
+    <MESSAGE value="+ Authorization DAO&#10;+ Authoriaztion Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Authorization DAO&#10;+ Authoriaztion Service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -852,6 +915,8 @@
           <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2432#2433#0" expanded="true" />
+            <element signature="e#2471#2472#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -947,13 +1012,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="14" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -966,14 +1024,6 @@
             <element signature="e#1678#1679#0" expanded="false" />
             <element signature="e#1720#1721#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/factories/ConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1036,31 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/AuthorizationDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/AuthorizationDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="21" column="86" selection-start-line="21" selection-start-column="86" selection-end-line="21" selection-end-column="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#764#765#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <marker date="1479838730000" expanded="true" signature="401:448" ph="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/AuthorizationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1085,11 +1110,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/factories/DaoFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="48" column="144" selection-start-line="48" selection-start-column="144" selection-end-line="48" selection-end-column="144" />
+        <state relative-caret-position="-135">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2432#2433#0" expanded="true" />
+            <element signature="e#2471#2472#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/AuthorizationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/AuthorizationDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1479840149000" expanded="true" signature="400:447" ph="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/factories/ConnectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

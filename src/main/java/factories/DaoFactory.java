@@ -24,7 +24,6 @@ public class DaoFactory {
     private AutoDAO autoDAO;
     private AuthorizationDAO authorizationDAO;
 
-
     private Properties properties;
 
     static {
@@ -78,5 +77,10 @@ public class DaoFactory {
     @NotNull
     public AutoDAO getAutoDAO() {
         return autoDAO;
+    }
+
+    @NotNull
+    public AuthorizationDAO getAuthorizationDAO() {
+        return authorizationDAO;
     }
 }
