@@ -1,6 +1,7 @@
 package factories;
 
 import com.sun.istack.internal.NotNull;
+import dao.AuthorizationDAO;
 import dao.AutoDAO;
 import dao.UsersDao;
 
@@ -21,6 +22,8 @@ public class DaoFactory {
 
     private UsersDao usersDao;
     private AutoDAO autoDAO;
+    private AuthorizationDAO authorizationDAO;
+
 
     private Properties properties;
 
@@ -38,9 +41,12 @@ public class DaoFactory {
 
             Constructor usersConstructor = Class.forName(properties.getProperty("")).getConstructor(Connection.class);
             Constructor autoConstructor = Class.forName(properties.getProperty("")).getConstructor(Connection.class);
+            Constructor authorizationConstructor = Class.forName(properties.getProperty("")).getConstructor(Connection.class);
+
 
             usersDao = (UsersDao) usersConstructor.newInstance(ConnectionFactory.getConnectionFactory().getConnection());
             autoDAO = (AutoDAO)autoConstructor.newInstance(ConnectionFactory.getConnectionFactory().getConnection());
+            authorizationDAO = (AuthorizationDAO)authorizationConstructor.newInstance(ConnectionFactory.getConnectionFactory().getConnection());
 
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
