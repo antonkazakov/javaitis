@@ -1,6 +1,6 @@
-package dao;
+package itis.dao;
 
-import models.User;
+import itis.models.User;
 
 /**
  * Created by antonkazakov on 22.11.16.

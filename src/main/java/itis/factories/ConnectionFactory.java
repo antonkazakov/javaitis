@@ -1,4 +1,4 @@
-package factories;
+package itis.factories;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -28,7 +28,7 @@ public class ConnectionFactory {
         properties = new Properties();
 
         try {
-            properties.load(new FileInputStream(""));
+            properties.load(new FileInputStream("/Users/antonkazakov/Auto/src/main/resources/database.properties"));
 
             String driver = properties.getProperty("database.driver");
             String url = properties.getProperty("database.url");

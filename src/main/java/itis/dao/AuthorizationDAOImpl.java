@@ -1,6 +1,6 @@
-package dao;
+package itis.dao;
 
-import models.User;
+import itis.models.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -33,25 +33,28 @@ public class AuthorizationDAOImpl implements AuthorizationDAO{
     public long register(String login, String password) {
 
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(SQL_SIGNUP);
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_SIGNUP, PreparedStatement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1,login);
             preparedStatement.setString(2,password);
 
             // If user exists throw exception
-            if (getUserByLogin(login)!=null){
-                throw new SQLException("USER EXISTS");
-            }
+            /// if (getUserByLogin(login)!=null){
+            ///     throw new SQLException("USER EXISTS");
+            //   }
 
             //If not exists
-            preparedStatement.executeQuery();
+
             int affectedRows = preparedStatement.executeUpdate();
+
 
             if (affectedRows==0){
                 //If user not created show error
                 throw new SQLException("ERROR ON REGISTERING");
             }else {
-                preparedStatement.getGeneratedKeys();
+
+                //preparedStatement.getGeneratedKeys();
                 if (preparedStatement.getGeneratedKeys().next()){
+
                     return preparedStatement.getGeneratedKeys().getLong(1);
                 }
             }

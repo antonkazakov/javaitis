@@ -1,8 +1,8 @@
-package factories;
+package itis.factories;
 
-import dao.AutoDAO;
-import dao.UsersDao;
-import services.UsersAndAutoService;
+import itis.dao.AutoDAO;
+import itis.dao.UsersDAO;
+import itis.services.UsersAndAutoService;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -32,7 +32,7 @@ public class UsersAndAutoServiceFactory {
 
         try {
             properties.load(new FileInputStream(""));
-            Constructor constructor = Class.forName(properties.getProperty("")).getConstructor(UsersDao.class, AutoDAO.class);
+            Constructor constructor = Class.forName(properties.getProperty("")).getConstructor(UsersDAO.class, AutoDAO.class);
             usersAndAutoService = (UsersAndAutoService) constructor.newInstance(DaoFactory.getDaoFactory().getUsersDao(),DaoFactory.getDaoFactory().getAutoDAO());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

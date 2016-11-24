@@ -1,12 +1,11 @@
-package dao;
+package itis.dao;
 
 import com.google.common.collect.Lists;
-import factories.ConnectionFactory;
-import models.Auto;
+import itis.factories.ConnectionFactory;
+import itis.models.Auto;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;

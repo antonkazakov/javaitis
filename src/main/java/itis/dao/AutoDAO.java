@@ -1,7 +1,6 @@
-package dao;
+package itis.dao;
 
-import models.Auto;
-import models.User;
+import itis.models.Auto;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package services;
+package itis.services;
 
-import models.Auto;
-import models.User;
+import itis.models.Auto;
+import itis.models.User;
 
 import java.util.List;
 

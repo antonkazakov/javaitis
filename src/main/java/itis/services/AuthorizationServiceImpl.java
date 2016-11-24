@@ -1,7 +1,7 @@
-package services;
+package itis.services;
 
 import com.sun.istack.internal.NotNull;
-import dao.AuthorizationDAO;
+import itis.dao.AuthorizationDAO;
 
 /**
  * Created by antonkazakov on 22.11.16.

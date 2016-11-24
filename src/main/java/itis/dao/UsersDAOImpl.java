@@ -1,6 +1,6 @@
-package dao;
+package itis.dao;
 
-import models.User;
+import itis.models.User;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by antonkazakov on 21.11.16.
  */
-public class UserDAOImpl implements UsersDao{
+public class UsersDAOImpl implements UsersDAO {
 
     Connection connection;
 
@@ -18,7 +18,7 @@ public class UserDAOImpl implements UsersDao{
     private static final String SQL_GET_USER = "SELECT * FROM users(id) VALUE(?);";
     private static final String SQL_DELETE_USER = "DELETE FROM users WHERE id == ?;";
     private static final String SQL_UPDATE_USER = "UPDATE users SET name == ?, city == ?, age == ? WHERE id == ?;";
-    public UserDAOImpl(Connection connection) {
+    public UsersDAOImpl(Connection connection) {
         this.connection = connection;
     }
 

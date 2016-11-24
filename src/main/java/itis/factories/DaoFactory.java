@@ -1,9 +1,9 @@
-package factories;
+package itis.factories;
 
 import com.sun.istack.internal.NotNull;
-import dao.AuthorizationDAO;
-import dao.AutoDAO;
-import dao.UsersDao;
+import itis.dao.AuthorizationDAO;
+import itis.dao.AutoDAO;
+import itis.dao.UsersDAO;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -20,15 +20,16 @@ public class DaoFactory {
 
     private static DaoFactory daoFactory;
 
-    private UsersDao usersDao;
+    private UsersDAO usersDao;
     private AutoDAO autoDAO;
     private AuthorizationDAO authorizationDAO;
 
     private Properties properties;
 
     static {
-        new DaoFactory();
+       daoFactory = new DaoFactory();
     }
+
 
     private DaoFactory() {
 
@@ -36,14 +37,14 @@ public class DaoFactory {
 
         try {
 
-            properties.load(new FileInputStream(""));
+            properties.load(new FileInputStream("/Users/antonkazakov/Auto/src/main/resources/database.properties"));
 
-            Constructor usersConstructor = Class.forName(properties.getProperty("")).getConstructor(Connection.class);
-            Constructor autoConstructor = Class.forName(properties.getProperty("")).getConstructor(Connection.class);
-            Constructor authorizationConstructor = Class.forName(properties.getProperty("")).getConstructor(Connection.class);
+            Constructor usersConstructor = Class.forName(properties.getProperty("userdao.class")).getConstructor(Connection.class);
+            Constructor autoConstructor = Class.forName(properties.getProperty("autodao.class")).getConstructor(Connection.class);
+            Constructor authorizationConstructor = Class.forName(properties.getProperty("authorizationdao.class")).getConstructor(Connection.class);
 
 
-            usersDao = (UsersDao) usersConstructor.newInstance(ConnectionFactory.getConnectionFactory().getConnection());
+            usersDao = (UsersDAO) usersConstructor.newInstance(ConnectionFactory.getConnectionFactory().getConnection());
             autoDAO = (AutoDAO)autoConstructor.newInstance(ConnectionFactory.getConnectionFactory().getConnection());
             authorizationDAO = (AuthorizationDAO)authorizationConstructor.newInstance(ConnectionFactory.getConnectionFactory().getConnection());
 
@@ -70,7 +71,7 @@ public class DaoFactory {
     }
 
     @NotNull
-    public UsersDao getUsersDao() {
+    public UsersDAO getUsersDao() {
         return usersDao;
     }
 

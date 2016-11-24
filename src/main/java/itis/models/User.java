@@ -1,4 +1,4 @@
-package models;
+package itis.models;
 
 import com.google.common.base.Objects;
 

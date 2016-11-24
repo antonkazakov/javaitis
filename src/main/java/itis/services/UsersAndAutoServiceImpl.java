@@ -1,9 +1,9 @@
-package services;
+package itis.services;
 
-import dao.AutoDAO;
-import dao.UsersDao;
-import models.Auto;
-import models.User;
+import itis.dao.AutoDAO;
+import itis.dao.UsersDAO;
+import itis.models.Auto;
+import itis.models.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +13,10 @@ import java.util.List;
  */
 public class UsersAndAutoServiceImpl implements UsersAndAutoService {
 
-    UsersDao usersDao;
+    UsersDAO usersDao;
     AutoDAO autoDAO;
 
-    public UsersAndAutoServiceImpl(UsersDao usersDao, AutoDAO autoDAO) {
+    public UsersAndAutoServiceImpl(UsersDAO usersDao, AutoDAO autoDAO) {
         this.usersDao = usersDao;
         this.autoDAO = autoDAO;
     }

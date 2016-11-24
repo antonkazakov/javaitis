@@ -1,9 +1,7 @@
-package dao;
+package itis.dao;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by antonkazakov on 21.11.16.
