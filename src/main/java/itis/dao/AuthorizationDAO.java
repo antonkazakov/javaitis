@@ -9,7 +9,7 @@ public interface AuthorizationDAO {
 
     User getUserByLogin(String login);
 
-    long login(String login, String password);
+    String login(String login, String password);
 
     long register(String login, String password);
 

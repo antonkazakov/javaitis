@@ -1,9 +1,12 @@
 package itis.dao;
 
 import itis.models.User;
+import itis.utils.Utils;
 
+import javax.rmi.CORBA.Util;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -13,7 +16,7 @@ public class AuthorizationDAOImpl implements AuthorizationDAO{
 
     Connection connection;
 
-    private final String SQL_LOGIN = "SELECT * FROM users WHERE name = ? AND password = ?";
+    private final String SQL_LOGIN = "SELECT * FROM users WHERE login = ? AND password = ?";
     private final String SQL_SIGNUP = "INSERT INTO users(login, password) VALUES (?,?)";
     private final String SQL_GET_USER = "SELECT * FROM users WHERE id = ?";
     private final String SQL_GET_USER_BY_NAME = "SELECT * FROM users WHERE login = ?";
@@ -26,37 +29,52 @@ public class AuthorizationDAOImpl implements AuthorizationDAO{
         return null;
     }
 
-    public long login(String login, String password) {
-        return 0;
+    /**
+     * Log in
+     * @param login
+     * @param password
+     * @return
+     */
+    public String login(String login, String password) {
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_LOGIN);
+            preparedStatement.setString(1,login);
+            preparedStatement.setString(2,Utils.md5(password));
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()){
+                return resultSet.getString("token");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
+
+    /**
+     * Register user
+     * @param login
+     * @param password
+     * @return
+     */
     public long register(String login, String password) {
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL_SIGNUP, PreparedStatement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1,login);
-            preparedStatement.setString(2,password);
-
-            // If user exists throw exception
-            /// if (getUserByLogin(login)!=null){
-            ///     throw new SQLException("USER EXISTS");
-            //   }
-
-            //If not exists
+            preparedStatement.setString(2, Utils.md5(password));
 
             int affectedRows = preparedStatement.executeUpdate();
-
 
             if (affectedRows==0){
                 //If user not created show error
                 throw new SQLException("ERROR ON REGISTERING");
             }else {
-
-                //preparedStatement.getGeneratedKeys();
-                if (preparedStatement.getGeneratedKeys().next()){
-
+                if (preparedStatement.getGeneratedKeys().next())
                     return preparedStatement.getGeneratedKeys().getLong(1);
-                }
             }
 
         } catch (SQLException e) {

@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         AuthorizationServiceImpl authorizationService = new AuthorizationServiceImpl(DaoFactory.getDaoFactory().getAuthorizationDAO());
 
-        System.out.println(authorizationService.register("tes22232212q2t2w", "tetet")+"");
+        System.out.println(authorizationService.login("anton", "23"));
     }
 
 }

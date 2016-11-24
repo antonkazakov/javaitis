@@ -10,4 +10,6 @@ public interface AuthorizationService {
     @NotNull
     long register(String login, String password);
 
+    String login(String login, String password);
+
 }

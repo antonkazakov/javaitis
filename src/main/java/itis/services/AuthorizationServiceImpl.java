@@ -14,15 +14,15 @@ public class AuthorizationServiceImpl implements AuthorizationService{
         this.authorizationDAO = authorizationDAO;
     }
 
-    /**
-     * Register new user
-     * @param login
-     * @param password
-     * @return
-     */
+
     @NotNull
     public long register(String login, String password) {
         return authorizationDAO.register(login,password);
+    }
+
+
+    public String login(String login, String password) {
+        return authorizationDAO.login(login,password);
     }
 
 }
